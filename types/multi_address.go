@@ -40,10 +40,10 @@ func (m MultiAddress) Encode(encoder scale.Encoder) error {
 	var err error
 	switch {
 	case m.IsID:
-		err = encoder.PushByte(0)
-		if err != nil {
-			return err
-		}
+		//err = encoder.PushByte(0)
+		//if err != nil {
+		//	return err
+		//}
 		err = encoder.Encode(m.AsID)
 		if err != nil {
 			return err
